@@ -66,3 +66,19 @@ A few resources to get you started if this is your first Flutter project:
        ...
        package="com.example.appname">
 - place the google-service.json  inside android/app <br>
+
+## Adding firebase to flutter app.
+- [Pub dev link](https://pub.dev/packages)
+- [Pub dev firebase_core link](https://pub.dev/packages/firebase_core/install)
+- Add firebase_core, run: 
+
+       flutter pub add firebase_core
+- Add firebase_auth, run:
+
+        flutter pub add firebase_auth
+- Add cloud_firestore, run:
+
+        flutter pub add 
+- Add shared_preferences, run:
+
+        flutter pub add shared_preferences
