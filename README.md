@@ -52,3 +52,17 @@ A few resources to get you started if this is your first Flutter project:
 
         keytool -list -v -keystore debug.keystore -alias androiddebugkey
 
+
+## Obtaining package name:
+- iOS:
+- In iOS the package name is the bundle identifier in Info.plist. which is found in Runner.xcodeproj/project.pbxproj:
+
+      PRODUCT_BUNDLE_IDENTIFIER = com.example.chatAppFlutter; 
+- place the GoogleService-Info.plist  inside iOS/Runner <br>
+- Android: 
+- In Android the package name is in the AndroidManifest:
+
+      <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+       ...
+       package="com.example.appname">
+- place the google-service.json  inside android/app <br>
