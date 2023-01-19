@@ -10,7 +10,8 @@ A few resources to get you started if this is your first Flutter project:
 
 - [Client authentication](https://developers.google.com/android/guides/client-auth)
 - [Youtube tutorial](https://www.youtube.com/watch?v=Qwk5oIAkgnY&t=704s&ab_channel=BackslashFlutter)
-
+- [Tutorial link](https://github.com/backslashflutter/group_chatapp_flutter_firebase)
+- [Images](https://drive.google.com/file/d/1yqDo2_gDkmfVOnYCoT5uElUSXv9aZpcO/view)
 
 ## Generate SSH i.e Using terminal or in android studio.
 1. Using terminal
