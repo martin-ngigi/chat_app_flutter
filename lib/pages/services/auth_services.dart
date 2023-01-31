@@ -11,6 +11,24 @@ class AuthServices{
   /**
    * LOGIN SERVICE
    */
+  Future loginWithUsernameAndPassword( String email, String password) async{
+    try{
+      //create user
+      User user = (await firebaseAuth
+          .signInWithEmailAndPassword(email: email, password: password))
+          .user!;
+
+      //check
+      if(user != null){
+        return true;
+      }
+
+    } on FirebaseAuthException catch (e){
+      print("Firebase error has occurred. \nHint:${e.message}");
+      return e.message;
+    }
+  }
+
 
   /**
    * REGISTER SERVICE
@@ -25,7 +43,7 @@ class AuthServices{
       //check
       if(user != null){
         //call our database service to update the user
-        await DatabaseService(uid: user.uid).updateUserData(fullName, email);
+        await DatabaseService(uid: user.uid).savingUserData(fullName, email);
         return true;
       }
 

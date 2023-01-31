@@ -192,13 +192,11 @@ class _RegisterPageState extends State<RegisterPage> {
           .then((value) async {
         if(value == true){
           //saving share preference state
-          //showSnackBar(context, Colors.green,  "Registered Successfully.",);
+          showSnackBar(context, Colors.green,  "Registered Successfully.",);
           await HelperFunctions.savedUserLoggedInState(true);
           await HelperFunctions.savedUserEmailSF(email);
           await HelperFunctions.savedUserNameSF(fullName);
           nextScreenReplace(context, const HomePage());
-
-
         }
         else{
           showSnackBar(context, Colors.red,  value.toString(),);
