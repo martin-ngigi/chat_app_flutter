@@ -1,5 +1,8 @@
 import 'package:chat_app_flutter/pages/services/auth_services.dart';
+import 'package:chat_app_flutter/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+
+import 'auth/login_page.dart';
 
 //stful
 class HomePage extends StatefulWidget {
@@ -19,6 +22,7 @@ class _HomePageState extends State<HomePage> {
           child: ElevatedButton(
             onPressed: (){
               authServices.signOut();
+              nextScreenReplace(context, const LoginPage());
             },
             child: Text("LogOut"),
           ),
