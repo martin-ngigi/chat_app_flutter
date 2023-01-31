@@ -1,3 +1,4 @@
+import 'package:chat_app_flutter/helper/helper_function.dart';
 import 'package:chat_app_flutter/pages/services/database_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -38,4 +39,16 @@ class AuthServices{
   /**
    * SIGNOUT SERVICE
    */
+  Future signOut() async{
+    try{
+      await HelperFunctions.savedUserLoggedInState(false);
+      await HelperFunctions.savedUserEmailSF("");
+      await HelperFunctions.savedUserNameSF("");
+      await firebaseAuth.signOut();
+    }
+    catch(e){
+      print("Sign Out Error: ${e}");
+      return null;
+    }
+  }
 }
