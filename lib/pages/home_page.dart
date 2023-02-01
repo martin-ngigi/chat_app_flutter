@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
     });
 
     //get username
-    await HelperFunctions.getUserEmailFromSF().then((val){
+    await HelperFunctions.getUserNameFromSF().then((val){
       setState(() {
         userName = val!;
       });
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               onTap: (){
-                nextScreen(context, const ProfilePage());
+                nextScreenReplace(context, ProfilePage(email: email, userName: userName,));
               },
               contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               leading: const Icon( Icons.person),
