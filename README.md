@@ -83,3 +83,11 @@ A few resources to get you started if this is your first Flutter project:
 - Add shared_preferences, run:
 
         flutter pub add shared_preferences
+
+## Running the web app
+- Navigate to current project directory i.e. C:\Users\Administrator\AndroidStudioProjects\chat_app_flutter>
+- Then run the following command so as to run web app
+
+```
+flutter run -d chrome
+```
