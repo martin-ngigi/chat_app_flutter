@@ -46,6 +46,7 @@ class _GroupInfoState extends State<GroupInfo> {
     return r.substring(r.indexOf("_") + 1);
   }
 
+  //
   String getId(String res) {
     return res.substring(0, res.indexOf("_"));
   }
