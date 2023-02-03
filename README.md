@@ -13,6 +13,28 @@ A few resources to get you started if this is your first Flutter project:
 - [Tutorial link](https://github.com/backslashflutter/group_chatapp_flutter_firebase)
 - [Images](https://drive.google.com/file/d/1yqDo2_gDkmfVOnYCoT5uElUSXv9aZpcO/view)
 
+## Images preview.
+1. login
+- ![login](images/login.png)
+2. register
+- ![register](images/register.png)
+3. drawer
+- ![drawer](images/drawer.png)
+4. profile
+- ![profile](images/profile.png)
+5. profile
+- ![profile](images/search_group.png)
+6. create group
+- ![create group](images/create_group.png)
+7. chat
+- ![chat](images/chat.png)
+8. group infor
+- ![group infor](images/group_infor.png)
+9. exit group
+- ![exit group](images/exit_group.png)
+10. logout
+- ![logout](images/logout.png)
+
 ## Generate SSH i.e Using terminal or in android studio.
 1. Using terminal
 - [Generate SHA 1 Key In Flutter On Windows](https://www.youtube.com/watch?v=wGOTwojezy8&ab_channel=BackslashFlutter)
