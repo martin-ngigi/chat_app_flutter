@@ -4,6 +4,8 @@ import 'package:chat_app_flutter/widgets/widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/message_tile.dart';
+
 //stful
 class ChatPage extends StatefulWidget {
   final String groupId;
@@ -70,7 +72,8 @@ getChatAndAdmin(){
      ),
       body: Stack(
         children: [
-          //chat messages here
+          //get messages here
+          chatMessages(),
           Container(
             alignment: Alignment.bottomCenter,
             width: MediaQuery.of(context).size.width,
@@ -119,6 +122,8 @@ getChatAndAdmin(){
       ),
     );
   }
+
+
   sendMessage(){
     if(messageController.text.isNotEmpty){
       Map<String, dynamic> chatMessageMap = {
@@ -136,5 +141,25 @@ getChatAndAdmin(){
     else{
       showSnackBar(context, Colors.red, "Cant Send an empty message");
     }
+  }
+
+  chatMessages(){
+    return StreamBuilder(
+        stream: chats,
+        builder: (context, AsyncSnapshot snapshot){
+          return snapshot.hasData
+              ? ListView.builder(
+                itemCount: snapshot.data.docs.length,
+                itemBuilder: (context, index){
+                  return MessageTile(
+                      message: snapshot.data.docs[index]['message'],
+                      sender: snapshot.data.docs[index]['sender'],
+                      sentByMe: widget.userName ==
+                          snapshot.data.docs[index]['sender']);
+                }
+              )
+              :Container();
+        }
+    );
   }
 }
